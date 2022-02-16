@@ -2,7 +2,7 @@ const wrapper = document.querySelector(".wrapper"),
     inputPart = wrapper.querySelector(".input-part"),
     infoTxt = inputPart.querySelector(".info-text"),
     inputField = inputPart.querySelector("input"),
-    localtionBtn = inputPart.querySelector("button"),
+    locationBtn = inputPart.querySelector("button"),
     wIcons = document.querySelector(".weather-part img"),
     arrowBack = wrapper.querySelector("header i");
 
@@ -14,7 +14,7 @@ inputField.addEventListener("keyup", (e) => {
     }
 });
 
-localtionBtn.addEventListener("click", () => {
+locationBtn.addEventListener("click", () => {
     if (navigator.geolocation) {
         navigator
             .geolocation
@@ -43,14 +43,14 @@ function requestApi(city) {
 }
 
 function fetchData() {
-    infoTxt.innerHTML = "Getting weather deteils...";
+    infoTxt.innerHTML = "Getting weather details...";
     infoTxt
         .classList
         .add("pending");
-    fetch(api).then((response) => response.json()).then((result) => weatherDeteils(result));
+    fetch(api).then((response) => response.json()).then((result) => weatherDetails(result));
 }
 
-function weatherDeteils(info) {
+function weatherDetails(info) {
     infoTxt
         .classList
         .replace("pending", "error");
