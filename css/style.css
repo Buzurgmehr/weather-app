@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: border-box;
     font-family: 'Roboto Mono', monospace;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,13 +13,13 @@ body{
     background: #43affc;
 }
 
-.wrapper{
+.wrapper {
     width: 400px;
     border-radius: 7px;
     background: #fff;
 }
 
-.wrapper header{
+.wrapper header {
     color: #43affc;
     font-size: 21px;
     font-weight: 500;
@@ -29,30 +29,31 @@ body{
     border-bottom: 1px solid #bfbfbf;
 }
 
-header i{
+header i {
     cursor: pointer;
-    font-size: 0px;
-    margin-right: 8px
+    font-size: 0;
+    margin-right: 8px;
 }
 
-.wrapper .input-part{
+.wrapper .input-part {
     margin: 20px 25px 30px;
     /* display: none; */
 }
 
-.wrapper.active .input-part{
+.wrapper.active .input-part {
     display: none;
 }
 
-.wrapper.active .weather-part{
+.wrapper.active .weather-part {
     display: flex;
 }
 
-.wrapper.active header i{
+.wrapper.active header i {
     font-size: 30px;
     margin-left: 5px;
 
 }
+
 .input-part .info-text {
     font-size: 17px;
     text-align: center;
@@ -62,25 +63,23 @@ header i{
     display: none;
 }
 
-.info-text.error{
+.info-text.error {
     display: block;
     color: #721c24;
     background: #f8d7da;
     border: 1px solid #f5c6cb;
 }
 
-.info-text.pending{
+.info-text.pending {
     display: block;
     color: #0c5460;
     background: #d1ecf1;
     border: 1px solid #bee5eb;
 }
-
-.input-part input:is(:focus, :valid){
+.input-part input:is(:focus, :valid) {
     border: 2px solid #43affc;
 }
-
-.input-part  :where(input, button){
+.input-part:where(input, button) {
     width: 100%;
     height: 55px;
     font-size: 18px;
@@ -89,12 +88,12 @@ header i{
     border-radius: 7px;
 }
 
-.input-part input{
+.input-part input {
     text-align: center;
     border: 1px solid #bfbfbf;
 }
 
-.input-part .seperator{
+.input-part .seperator {
     height: 1px;
     width: 100%;
     margin: 25px;
@@ -104,13 +103,13 @@ header i{
     color: #ccc;
 }
 
-.input-part button{
+.input-part button {
     color: #fff;
     background: #43affc;
     cursor: pointer;
 }
 
-.wrapper .weather-part{
+.wrapper .weather-part {
     margin: 30px 0 0;
     display: none;
     align-items: center;
@@ -118,7 +117,7 @@ header i{
     flex-direction: column;
 }
 
-.weather-part img{
+.weather-part img {
     max-width: 125px;
 }
 
@@ -132,25 +131,25 @@ header i{
     font-weight: 600;
 }
 
-.weather-part .temp .deg{
+.weather-part .temp .deg {
     font-size: 40px;
     margin: 10px 5px 0;
     display: block;
 }
 
-.weather-part .location{
+.weather-part .location {
     font-size: 21px;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.location i{
+.location i {
     font-size: 22px;
     margin-right: 5px;
 }
 
-.weather-part .bottom-detail{
+.weather-part .bottom-detail {
     width: 100%;
     display: flex;
     align-items: center;
@@ -166,22 +165,23 @@ header i{
     justify-content: center;
 }
 
-.column i{
+.column i {
     font-size: 40px;
     color: #43affc;
 }
 
-.column.humidity{
+.column.humidity {
     border-left: 1px solid #bfbfbf;
 }
 
-.details .temp, .humidity span{
+.details .temp,
+.humidity span {
     font-size: 18px;
     font-weight: 500;
     margin-top: -3px;
 }
 
-.details .temp .deg{
+.details .temp .deg {
     margin: 0;
     font-size: 17px;
     pad: 0 2px 0 1px;
